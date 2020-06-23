@@ -475,7 +475,9 @@ function render() {
     renderButtons()
 }
 
-window.onload = () => {
+window.onload = async () => {
+
+    await showAD()
     while (nickname === '') {
         nickname = prompt('Enter your nickname')
     }

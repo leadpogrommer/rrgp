@@ -1,0 +1,99 @@
+.ad-hidden{
+    display: none !important;
+}
+
+.ad-wrapper{
+    z-index: 9999;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-content{
+    z-index: 10000;
+    background-color: wheat;
+    border: black;
+    border-radius: 10px;
+    padding: 10px;
+    height: 85vh;
+    max-width: calc(80vh * 0.75);
+
+}
+
+.ad-content p{
+    font-size: 3.5vh;
+}
+.ad-header{
+    display: flex;
+    align-content: baseline;
+    max-height: fit-content;
+}
+.ad-header img{
+    width: auto;
+    height: 9vh;
+    flex-basis: content;
+    margin-left: auto;
+}
+
+.ad-content  h1{
+    font-size: 9vh;
+    margin: 0;
+    /*height: 80vh;*/
+    /*padding-left: 50%;*/
+}
+
+
+.ad-wrapper:not(.ad-hidden){
+    animation-name: ad-fade-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+.ad-wrapper:not(.ad-hidden)>.ad-content{
+    animation-name: spin-and-zoom;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes ad-fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes spin-and-zoom {
+    from{
+        transform: rotate(2000deg)scale(0, 0);
+
+    }
+    to{
+        transform: none;
+    }
+
+}
+
+.ad-content a{
+
+}
+
+.ad-close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5vh;
+    height: auto;
+}
+
+.ad-close:hover{
+    filter: blur(0.1vh);
+}
