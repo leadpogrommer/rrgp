@@ -1,2 +1,2 @@
-[![Build Status](https://travis-ci.org/3g-soft/rrgp.svg?branch=develop)](https://travis-ci.org/3g-soft/rrgp)
+[![Build Status](https://travis-ci.org/leadpogrommer/rrgp.svg?branch=master)](https://travis-ci.org/leadpogrommer/rrgp)
 # rrgp
